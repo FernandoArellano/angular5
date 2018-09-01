@@ -1,0 +1,11 @@
+.title{
+  font-family: Arial;
+  font-size: 40px;
+  font-weight: bold;
+}
+.contenido{
+  background-color: lightblue;
+  font-size: 26px;
+  font-family: "Times New Roman";
+  font-style: italic;
+}
