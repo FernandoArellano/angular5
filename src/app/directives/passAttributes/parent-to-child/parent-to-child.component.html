@@ -1,0 +1,15 @@
+<h3>Alta de Jugadores</h3>
+
+<div *ngIf="mostrarFormaParaAlta">
+  Nombre:<input type="input" #nombre/><br><br>
+  Edad:<input type="input" #edad/><br><br>
+  Numero:<input type="input" #numero/><br>
+  <button (click)="agregarJugador(nombre,edad,numero)">Agregar Nuevo Jugador</button>
+</div>
+
+<br>
+<button *ngIf="!mostrarFormaParaAlta" (click)="toogleForm()">Agregar Jugador</button>
+<button *ngIf="mostrarFormaParaAlta" (click)="toogleForm()">Ocultar Forma</button>
+
+
+<app-child *ngIf="dummyJugadores && dummyJugadores.length > 0" [jugadores]="dummyJugadores"></app-child>

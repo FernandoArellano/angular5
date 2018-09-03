@@ -1,0 +1,9 @@
+<h3>Lista de Jugadore Registrados:</h3>
+
+<ul *ngIf="jugadores && jugadores.length > 0">
+  <li *ngFor="let jugador of jugadores">
+    Nombre:{{jugador.nombre}}
+    Edad:{{jugador.edad}}
+    Numero:{{jugador.numero}}
+  </li>
+</ul>
