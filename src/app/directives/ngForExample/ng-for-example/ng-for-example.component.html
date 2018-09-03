@@ -1,0 +1,17 @@
+<h3>
+  Arreglo de Colores
+</h3>
+
+<!-- ng if existe y no esta vacio, si esta vacio no se muestra-->
+<ul *ngIf="arreglo && arreglo.length > 0">
+  <p>Lista de colores</p>
+  <!-- asigna cada elemento de arreglo en color -->
+  <li *ngFor="let color of arreglo">{{color}}</li>
+</ul>
+
+<!-- temp variable regresa un HTMLInputElement no solo el texto-->
+<input type="text" name="colorNuevo" #newColor/>
+<!-- click event -->
+<button (click)="agregarColor(newColor)">Agregar Color</button>
+
+<button (click)="clearArray()">Borrar Arreglo</button>
