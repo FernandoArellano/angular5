@@ -8,6 +8,8 @@ import { NgForExampleComponent } from './directives/ngForExample/ng-for-example/
 import { ParentToChildComponent } from './directives/passAttributes/parent-to-child/parent-to-child.component';
 import { ChildComponent } from './directives/passAttributes/child/child.component';
 import { EnumerationsComponent } from './directives/enumerations/enumerations.component';
+import { OutputExampleComponent } from './directives/output-example/output-example.component';
+import { OutputChildComponent } from './directives/output-example/output-child/output-child.component';
 
 
 @NgModule({
@@ -18,6 +20,8 @@ import { EnumerationsComponent } from './directives/enumerations/enumerations.co
     ParentToChildComponent,
     ChildComponent,
     EnumerationsComponent,
+    OutputExampleComponent,
+    OutputChildComponent,
   ],
   imports: [
     BrowserModule
