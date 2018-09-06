@@ -10,6 +10,7 @@ import { ChildComponent } from './directives/passAttributes/child/child.componen
 import { EnumerationsComponent } from './directives/enumerations/enumerations.component';
 import { OutputExampleComponent } from './directives/output-example/output-example.component';
 import { OutputChildComponent } from './directives/output-example/output-child/output-child.component';
+import { SwitchExampleComponent } from './directives/switch-example/switch-example.component';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { OutputChildComponent } from './directives/output-example/output-child/o
     EnumerationsComponent,
     OutputExampleComponent,
     OutputChildComponent,
+    SwitchExampleComponent,
   ],
   imports: [
     BrowserModule
