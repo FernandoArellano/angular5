@@ -11,6 +11,8 @@ import { EnumerationsComponent } from './directives/enumerations/enumerations.co
 import { OutputExampleComponent } from './directives/output-example/output-example.component';
 import { OutputChildComponent } from './directives/output-example/output-child/output-child.component';
 import { SwitchExampleComponent } from './directives/switch-example/switch-example.component';
+import { FormExampleComponent } from './directives/form-example/form-example.component';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 
 @NgModule({
@@ -24,9 +26,12 @@ import { SwitchExampleComponent } from './directives/switch-example/switch-examp
     OutputExampleComponent,
     OutputChildComponent,
     SwitchExampleComponent,
+    FormExampleComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

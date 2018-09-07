@@ -1,0 +1,14 @@
+<h3>Forms</h3>
+
+<input type="text" [formControl]="dayControl"/>
+
+<p>{{dayControl.value}}</p>
+
+<form [formGroup]="teamForm">
+  Nombre:<input type="text" formControlName="nombre"/><br>
+  Edad:<input type="text" formControlName="edad"/><br>
+  Numero:<input type="text" formControlName="numero"/><br>
+  <button>Enviar</button>
+</form>
+
+<p>{{teamForm.value | json}}</p>
