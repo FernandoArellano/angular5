@@ -13,6 +13,8 @@ import { OutputChildComponent } from './directives/output-example/output-child/o
 import { SwitchExampleComponent } from './directives/switch-example/switch-example.component';
 import { FormExampleComponent } from './directives/form-example/form-example.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {BasicService} from "./services/basicService";
+import { TestServicesComponent } from './directives/test-services/test-services.component';
 
 
 @NgModule({
@@ -27,13 +29,16 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
     OutputChildComponent,
     SwitchExampleComponent,
     FormExampleComponent,
+    TestServicesComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    BasicService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
