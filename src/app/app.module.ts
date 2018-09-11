@@ -17,9 +17,20 @@ import {BasicService} from "./services/basicService";
 import { TestServicesComponent } from './directives/test-services/test-services.component';
 import {HttpService} from "./services/httpService";
 import {HttpClientModule} from "@angular/common/http";
+import { RoutesExampleComponent } from './directives/routes-example/routes-example.component';
+import {RouterModule, Routes} from "@angular/router";
+
+const appRoutes: Routes = [
+  {path: 'ngForExample/:param', component: NgForExampleComponent},
+  {path: 'enumerations', component: EnumerationsComponent},
+  {path: 'output', component: OutputExampleComponent},
+  {path: 'services', component: TestServicesComponent},
+];
+
 
 
 @NgModule({
+
   declarations: [
     AppComponent,
     TestComponent,
@@ -32,12 +43,14 @@ import {HttpClientModule} from "@angular/common/http";
     SwitchExampleComponent,
     FormExampleComponent,
     TestServicesComponent,
+    RoutesExampleComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    RouterModule.forRoot(appRoutes),
   ],
   providers: [
     BasicService,

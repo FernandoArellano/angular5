@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ActivatedRoute, Router} from "@angular/router";
 
 @Component({
   selector: 'app-ng-for-example',
@@ -8,17 +9,23 @@ import { Component, OnInit } from '@angular/core';
 export class NgForExampleComponent implements OnInit {
 
   arreglo: Array<string> = new Array();
+  parametro: any;
 
-  constructor() {
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router
+  ) {
     this.arreglo.push('Azul');
     this.arreglo.push('Morado');
     this.arreglo.push('Verde');
     this.arreglo.push('Amarillo');
     this.arreglo.push('Gris');
     console.log(this.arreglo);
+    route.params.subscribe(params => {this.parametro = params['param'];})
   }
 
   ngOnInit() {
+    console.log("Param recibido: ", this.parametro )
   }
 
   agregarColor(color: HTMLInputElement){

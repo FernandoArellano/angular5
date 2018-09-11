@@ -23,6 +23,16 @@
 
 <!--<app-switch-example></app-switch-example>-->
 
-<app-form-example></app-form-example>
+<!--<app-form-example></app-form-example>-->
 
-<app-test-services></app-test-services>
+<!--<app-test-services></app-test-services>-->
+
+<a [routerLink]="['/ngForExample/DummyParam']">For Example</a>
+<a [routerLink]="['/enumerations']">Enumerations</a>
+<a [routerLink]="['/output']">Output Example</a>
+<a [routerLink]="['/services']">Services Example</a>
+
+<h4>Antes</h4>
+<router-outlet></router-outlet>
+
+<h4>Despues</h4>

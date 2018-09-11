@@ -6,13 +6,11 @@ import {Observable} from "rxjs/Observable";
 @Injectable()
 export class HttpService{
 
-  data: Array<FakeMessageModel> = new Array();
-
   constructor(private http: HttpClient){
 
   }
 
-  makeRequest(): Observable<Array<FakeMessageModel>> {
+  makeRequest(): Observable<any> {
     return this.http.get('https://jsonplaceholder.typicode.com/posts')
   }
 }
