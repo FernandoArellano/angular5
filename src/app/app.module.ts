@@ -15,6 +15,8 @@ import { FormExampleComponent } from './directives/form-example/form-example.com
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {BasicService} from "./services/basicService";
 import { TestServicesComponent } from './directives/test-services/test-services.component';
+import {HttpService} from "./services/httpService";
+import {HttpClientModule} from "@angular/common/http";
 
 
 @NgModule({
@@ -34,10 +36,12 @@ import { TestServicesComponent } from './directives/test-services/test-services.
   imports: [
     BrowserModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [
-    BasicService
+    BasicService,
+    HttpService
   ],
   bootstrap: [AppComponent]
 })
