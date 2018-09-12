@@ -1,0 +1,11 @@
+<h3>HttpService:</h3>
+<div *ngFor="let fakeMessage of dataFromHttp; let i= index">
+<p *ngIf="i<6" >
+ {{i}} {{fakeMessage.body}} <button (click)="fillSubject(fakeMessage)">Agregar a Subject</button>
+</p>
+</div>
+
+<div *ngIf="arreglo && arreglo.length > 0">
+  <h4>Subject:</h4>
+  <p *ngFor="let valor of arreglo">{{valor}}</p>
+</div>
