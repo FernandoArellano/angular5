@@ -12,7 +12,7 @@ import {BehaviorSubject} from "rxjs/BehaviorSubject";
 export class ObserversExampleComponent implements OnInit {
 
   dataFromHttp: Array<FakeMessageModel> = new Array();
-  behaviorSub: Subject<String> = new BehaviorSubject<String>(null);
+  behaviorSub: Subject<string> = new BehaviorSubject<string>(null);
   arreglo: Array<string> = new Array();
 
   constructor(private httpService: HttpService) {  }
@@ -31,6 +31,6 @@ export class ObserversExampleComponent implements OnInit {
 
   fillSubject(fakeMessage: FakeMessageModel){
     this.behaviorSub.next(fakeMessage.title);
-  }
+  } 
 
 }
