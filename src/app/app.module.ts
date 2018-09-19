@@ -19,6 +19,7 @@ import {HttpService} from "./services/httpService";
 import {HttpClientModule} from "@angular/common/http";
 import {RouterModule, Routes} from "@angular/router";
 import { ObserversExampleComponent } from './directives/observers-example/observers-example.component';
+import { DirectiveExampleComponent } from './directives/directive-example/directive-example.component';
 
 const appRoutes: Routes = [
   {path: 'ngForExample/:param', component: NgForExampleComponent},
@@ -44,6 +45,7 @@ const appRoutes: Routes = [
     FormExampleComponent,
     TestServicesComponent,
     ObserversExampleComponent,
+    DirectiveExampleComponent,
   ],
   imports: [
     BrowserModule,
