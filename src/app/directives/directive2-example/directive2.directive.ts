@@ -1,4 +1,4 @@
-import {Directive, ElementRef, HostListener, Renderer} from '@angular/core';
+import {Directive, ElementRef, HostBinding, HostListener, Renderer} from '@angular/core';
 
 @Directive({
   selector: '[appDirective2]'
@@ -9,12 +9,14 @@ export class Directive2Directive {
    // renderer.setElementStyle(el.nativeElement, 'color', 'yellow');
   }
 
+  @HostBinding('style.border') border: string;
+
   @HostListener('mouseover') onMouseOver(){
-    this.ChangeBgColor('yellow');
+    this.border = '5px solid green';
   }
 
   @HostListener('mouseleave') onMouseLeave(){
-    this.ChangeBgColor('black')
+    this.border = 'none';
   }
 
   @HostListener('click') onClick(){
