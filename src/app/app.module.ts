@@ -21,6 +21,7 @@ import {RouterModule, Routes} from "@angular/router";
 import { ObserversExampleComponent } from './directives/observers-example/observers-example.component';
 import { DirectiveExampleComponent } from './directives/directive-example/directive-example.component';
 import { Directive2Directive } from './directives/directive2-example/directive2.directive';
+import { LifecycleComponent } from './directives/lifecycle/lifecycle.component';
 
 const appRoutes: Routes = [
   {path: 'ngForExample/:param', component: NgForExampleComponent},
@@ -48,6 +49,7 @@ const appRoutes: Routes = [
     ObserversExampleComponent,
     DirectiveExampleComponent,
     Directive2Directive,
+    LifecycleComponent,
   ],
   imports: [
     BrowserModule,
