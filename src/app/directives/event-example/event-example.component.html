@@ -1,0 +1,17 @@
+<h1>Events Example</h1>
+<input (keyup)="onKey($event)">
+<p>{{values}}</p>
+<br>
+<br>
+<input #box (keyup)="0">
+<p>{{box.value}}</p>
+
+<br>
+<br>
+<input #box2 (keyup)="onKey2(box2.value)">
+<p>{{values2}}</p>
+
+<br>
+<br>
+<input #box3 (keyup.enter)="onEnterFer(box3.value)" (blur)="clearBox()">
+<p>{{values3}}</p>
