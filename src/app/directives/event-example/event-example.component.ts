@@ -11,6 +11,7 @@ export class EventExampleComponent implements OnInit {
   values2 = '';
   values3 = '';
   emptyString = '';
+  nombre: string = 'Fernando';
 
   constructor() { }
 
